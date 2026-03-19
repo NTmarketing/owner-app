@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neighbors Trailer – Owner App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #0a0f0c;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Subtle radial glow */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -30%; left: 50%;
+      transform: translateX(-50%);
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(45,140,60,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .container {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      max-width: 520px;
+      width: 100%;
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.75rem;
+    }
+
+    .logo-img {
+      height: 72px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    h1 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 1.75rem;
+      line-height: 1.5;
+    }
+
+    .sticker-hero {
+      margin-bottom: 2rem;
+    }
+
+    .sticker-img {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 12px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    }
+
+    .store-cards {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .store-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.25rem;
+      border-radius: 16px;
+      background: #1a1a1a;
+      border: 1px solid rgba(255,255,255,0.08);
+      text-decoration: none;
+      color: #fff;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .store-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px rgba(45,140,60,0.2);
+      border-color: rgba(45,140,60,0.3);
+    }
+
+    .qr-code {
+      border-radius: 10px;
+      display: block;
+    }
+
+    .store-card__label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .store-card__label svg {
+      width: 20px; height: 20px;
+      flex-shrink: 0;
+    }
+
+    .scan-hint {
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.02em;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem 0 1.25rem;
+      color: rgba(255,255,255,0.25);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .footer-note {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.5;
+    }
+    .footer-note a {
+      color: #2D8C3C;
+      text-decoration: none;
+    }
+
+  </style>
+  <script>
+    // Instant redirect on mobile — fires before page renders
+    (function() {
+      var ua = navigator.userAgent || navigator.vendor || window.opera;
+      if (/android/i.test(ua)) {
+        window.location.replace('https://play.google.com/store/apps/details?id=com.neighbourstrailerowner');
+      } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+        window.location.replace('https://apps.apple.com/app/id1667847016');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo-mark">
+      <img src="https://mcusercontent.com/745cb9c6ac609051a6f344dd9/images/067b541d-e803-d26c-aafa-f5e39219c2de.png" alt="Neighbors Trailer" class="logo-img">
+    </div>
+
+
+      <h1>Get Your Free Trailer Bumper Sticker!</h1>
+      <p class="subtitle">Download the app to claim your free custom trailer bumper sticker with QR code — plus earn an extra $10 payout!</p>
+
+      <div class="sticker-hero">
+        <img src="https://mcusercontent.com/745cb9c6ac609051a6f344dd9/images/ad52d0b1-55c7-3874-a863-402265b84f79.png" alt="Free Neighbors Trailer bumper sticker on a trailer" class="sticker-img">
+      </div>
+
+      <div class="store-cards">
+        <a href="https://apps.apple.com/app/id1667847016" class="store-card">
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fapps.apple.com%2Fapp%2Fid1667847016&bgcolor=1a1a1a&color=ffffff&format=png"
+            alt="Scan for App Store"
+            class="qr-code"
+            width="180" height="180"
+          >
+          <div class="store-card__label">
+            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <span>App Store</span>
+          </div>
+        </a>
+
+        <a href="https://play.google.com/store/apps/details?id=com.neighbourstrailerowner" class="store-card">
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.neighbourstrailerowner&bgcolor=1a1a1a&color=ffffff&format=png"
+            alt="Scan for Google Play"
+            class="qr-code"
+            width="180" height="180"
+          >
+          <div class="store-card__label">
+            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.18 23.49c.27.16.59.24.91.22.31-.01.62-.11.88-.29L22 12 4.97.57c-.26-.18-.57-.28-.88-.29-.32-.02-.64.06-.91.22-.55.32-.89.9-.89 1.55v19.9c0 .65.34 1.23.89 1.54zM5.19 4.13 13.3 12l-8.11 7.87V4.13z"/>
+            </svg>
+            <span>Google Play</span>
+          </div>
+        </a>
+      </div>
+
+      <p class="scan-hint">Scan with your phone camera to download</p>
+
+      <div class="divider">or visit</div>
+      <p class="footer-note">
+        <a href="https://www.neighborstrailer.com">neighborstrailer.com</a>
+      </p>
+  </div>
+
+
+
+</body>
+</html>
